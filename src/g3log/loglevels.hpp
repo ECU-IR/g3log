@@ -69,6 +69,8 @@ namespace g3 {
    static const int kInternalFatalValue = 2000;
 }
 
+namespace g3 {
+
 #if (defined(CHANGE_G3LOG_DEBUG_TO_DBUG))
 const LEVELS DBUG {g3::kDebugValue, {"DEBUG"}},
 #else
@@ -98,7 +100,7 @@ const LEVELS DEBUG {g3::kDebugValue, {"DEBUG"}},
 // 1) Remember to update the FATAL initialization below
 // 2) Remember to update the initialization of "g3loglevels.cpp/g_log_level_status"
       FATAL {g3::kFatalValue, {"FATAL"}};
-
+}
 namespace g3 {
    namespace internal {
       const LEVELS CONTRACT {g3::kInternalFatalValue, {"CONTRACT"}},
